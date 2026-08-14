@@ -1,0 +1,107 @@
+{
+  "written_utc": "2026-07-26T09:01:06+00:00",
+  "duckdb_version": "1.5.5",
+  "mimic_version": "3.1",
+  "parameters": {
+    "min_age": 18,
+    "min_icu_los_days": 1.0,
+    "split_salt": "mimiciv-3.1-loadimbalance-v1",
+    "split_hash": "sha256(salt|subject_id)[:16] mod 100",
+    "split_bounds": {
+      "train": [
+        0,
+        70
+      ],
+      "val": [
+        70,
+        85
+      ],
+      "test": [
+        85,
+        100
+      ]
+    },
+    "permutation_seed": 20260726
+  },
+  "funnel": [
+    {
+      "step": "all ICU stays",
+      "n": 94458,
+      "removed": null
+    },
+    {
+      "step": "hadm_id not null",
+      "n": 94458,
+      "removed": 0
+    },
+    {
+      "step": "first stay per hadm_id",
+      "n": 85242,
+      "removed": 9216
+    },
+    {
+      "step": "age >= 18",
+      "n": 85242,
+      "removed": 0
+    },
+    {
+      "step": "ICU LOS >= 24 h",
+      "n": 67224,
+      "removed": 18018
+    },
+    {
+      "step": "hosp LOS > 0",
+      "n": 67218,
+      "removed": 6
+    }
+  ],
+  "summary": {
+    "n_stays": 67218,
+    "n_subjects": 53709,
+    "mean_age": 65.068851,
+    "frac_female": 0.434884,
+    "mortality": 0.110223,
+    "median_los_icu_days": 2.415747,
+    "median_los_hosp_days": 7.643056,
+    "p90_los_icu_days": 8.96187
+  },
+  "split_integrity": {
+    "pass": true,
+    "pooled_prevalence": 0.110223,
+    "per_split": [
+      {
+        "split": "test",
+        "n_stays": 10150,
+        "n_subjects": 8093,
+        "prevalence": 0.112217,
+        "delta_pp": 0.1993,
+        "median_los_hosp_days": 7.654
+      },
+      {
+        "split": "train",
+        "n_stays": 47049,
+        "n_subjects": 37688,
+        "prevalence": 0.110544,
+        "delta_pp": 0.0321,
+        "median_los_hosp_days": 7.646
+      },
+      {
+        "split": "val",
+        "n_stays": 10019,
+        "n_subjects": 7928,
+        "prevalence": 0.106697,
+        "delta_pp": -0.3526,
+        "median_los_hosp_days": 7.619
+      }
+    ],
+    "sanity": {
+      "short_icu": 0,
+      "underage": 0,
+      "bad_times": 0,
+      "null_death": 0,
+      "null_los": 0,
+      "neg_los": 0,
+      "dup_stay": 0
+    }
+  }
+}
