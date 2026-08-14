@@ -1,0 +1,80 @@
+{
+  "n_units": 67218,
+  "n_records": 156865224,
+  "max_unit": 126261,
+  "mean_unit": 2333.6788360260643,
+  "median_unit": 1220.0,
+  "p99_unit": 17649.13000000002,
+  "p99_over_median": 14.466500000000016,
+  "cv": 1.5403048304186298,
+  "gini": 0.5278752474163344,
+  "max_over_mean": 54.10384584667409,
+  "p_atom": 1242.3885760448595,
+  "p_star": 56,
+  "source": "/projects/sb2ea/csr/Wfull/offsets.i64",
+  "pstar_computed": true,
+  "sweep": [
+    {
+      "p": 16,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.04842653576594236,
+      "ceiling_vs_rung": 0.5765063781659804,
+      "resolvable": true,
+      "p_over_p_atom": 0.012878418482352723
+    },
+    {
+      "p": 32,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.06975286197915387,
+      "ceiling_vs_rung": 0.830391214037546,
+      "resolvable": true,
+      "p_over_p_atom": 0.025756836964705446
+    },
+    {
+      "p": 64,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.10223049834959652,
+      "ceiling_vs_rung": 1.2170297422571015,
+      "resolvable": true,
+      "p_over_p_atom": 0.05151367392941089
+    },
+    {
+      "p": 80,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.1155954022386303,
+      "ceiling_vs_rung": 1.3761357409360748,
+      "resolvable": true,
+      "p_over_p_atom": 0.06439209241176361
+    }
+  ]
+}

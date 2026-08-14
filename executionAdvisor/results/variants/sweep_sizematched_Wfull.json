@@ -1,0 +1,82 @@
+{
+  "n_units": 6676,
+  "n_records": 15315189,
+  "max_unit": 66107,
+  "mean_unit": 2294.066656680647,
+  "median_unit": 1216.0,
+  "p99_unit": 17310.75,
+  "p99_over_median": 14.235814144736842,
+  "cv": 1.5238663499574754,
+  "gini": 0.5253611494663064,
+  "max_over_mean": 28.81651228724634,
+  "p_atom": 231.6727275477635,
+  "p_star": 16,
+  "source": "/projects/sb2ea/csr/sizematched_Wfull/offsets.i64",
+  "pstar_computed": true,
+  "sweep": [
+    {
+      "p": 16,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.09975800643794219,
+      "ceiling_vs_rung": 1.187595314737407,
+      "resolvable": true,
+      "p_over_p_atom": 0.06906294137147115
+    },
+    {
+      "p": 32,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.18294793657564234,
+      "ceiling_vs_rung": 2.177951625900504,
+      "resolvable": true,
+      "p_over_p_atom": 0.1381258827429423
+    },
+    {
+      "p": 64,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.3227265128054071,
+      "ceiling_vs_rung": 3.8419822953024654,
+      "resolvable": true,
+      "p_over_p_atom": 0.2762517654858846
+    },
+    {
+      "p": 80,
+      "regime": "II",
+      "regime_name": "partition-limited",
+      "headline": "The partitioner is now the lever, and its value grows with p.",
+      "actions": [
+        "Use a contiguous, work-balanced partitioner.",
+        "Avoid non-contiguous assignments under a two-stage (rank-then-thread) decomposition.",
+        "Choose the node count so the unit count divides evenly across first-stage cuts.",
+        "Keep thread placement fixed -- its cost has not gone away, it has merely been overtaken."
+      ],
+      "ceiling": 0.39398363256081637,
+      "ceiling_vs_rung": 4.690281340009719,
+      "resolvable": true,
+      "p_over_p_atom": 0.34531470685735577
+    }
+  ]
+}

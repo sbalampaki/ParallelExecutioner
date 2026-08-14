@@ -1,0 +1,78 @@
+{
+  "n_units": 14832,
+  "n_records": 15314138,
+  "max_unit": 6703,
+  "mean_unit": 1032.5066073354908,
+  "median_unit": 969.0,
+  "p99_unit": 2289.0,
+  "p99_over_median": 2.362229102167183,
+  "cv": 0.3856298994338218,
+  "gini": 0.2069503815360476,
+  "max_over_mean": 6.491968140812105,
+  "p_atom": 2284.6692525734748,
+  "p_star": 144,
+  "source": "/projects/sb2ea/csr/sizematched_W48/offsets.i64",
+  "pstar_computed": true,
+  "sweep": [
+    {
+      "p": 16,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.019476344934396872,
+      "ceiling_vs_rung": 0.23186124921901036,
+      "resolvable": false,
+      "p_over_p_atom": 0.00700320187789871
+    },
+    {
+      "p": 32,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.028640359657024606,
+      "ceiling_vs_rung": 0.3409566625836262,
+      "resolvable": true,
+      "p_over_p_atom": 0.01400640375579742
+    },
+    {
+      "p": 64,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.04051501002888003,
+      "ceiling_vs_rung": 0.4823215479628574,
+      "resolvable": true,
+      "p_over_p_atom": 0.02801280751159484
+    },
+    {
+      "p": 80,
+      "regime": "I",
+      "regime_name": "placement-limited",
+      "headline": "Fix thread placement before touching the partitioner.",
+      "actions": [
+        "Bind threads so consecutive workers share a socket (OMP_PROC_BIND=close, OMP_PLACES=cores).",
+        "Read CPU-to-socket mapping from sysfs; do not assume the numbering scheme.",
+        "Partitioner choice is worth less than the placement decision at this scale."
+      ],
+      "ceiling": 0.04723775697246313,
+      "ceiling_vs_rung": 0.5623542496721801,
+      "resolvable": true,
+      "p_over_p_atom": 0.03501600938949355
+    }
+  ]
+}
