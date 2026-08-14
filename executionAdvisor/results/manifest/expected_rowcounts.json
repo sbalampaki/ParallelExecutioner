@@ -1,0 +1,10 @@
+{
+  "patients": 364627,
+  "admissions": 546028,
+  "diagnoses_icd": 6364488,
+  "d_labitems": 1650,
+  "labevents": 158374764,
+  "icustays": 94458,
+  "d_items": 4095,
+  "chartevents": 432997491
+}

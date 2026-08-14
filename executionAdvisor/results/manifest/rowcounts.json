@@ -1,0 +1,55 @@
+{
+  "mimic_version": "3.1",
+  "duckdb_version": "1.5.5",
+  "written_utc": "2026-07-26T08:40:47+00:00",
+  "tables": {
+    "d_labitems": {
+      "rows": 1650,
+      "src_bytes": 13169,
+      "dst_bytes": 14181,
+      "seconds": 0.0
+    },
+    "d_items": {
+      "rows": 4095,
+      "src_bytes": 58741,
+      "dst_bytes": 79550,
+      "seconds": 0.1
+    },
+    "patients": {
+      "rows": 364627,
+      "src_bytes": 2835586,
+      "dst_bytes": 2150916,
+      "seconds": 0.6
+    },
+    "icustays": {
+      "rows": 94458,
+      "src_bytes": 3342355,
+      "dst_bytes": 2617559,
+      "seconds": 0.5
+    },
+    "admissions": {
+      "rows": 546028,
+      "src_bytes": 19928140,
+      "dst_bytes": 16754593,
+      "seconds": 2.3
+    },
+    "diagnoses_icd": {
+      "rows": 6364488,
+      "src_bytes": 33564802,
+      "dst_bytes": 20022128,
+      "seconds": 2.2
+    },
+    "labevents": {
+      "rows": 158374764,
+      "src_bytes": 2592909134,
+      "dst_bytes": 1418361864,
+      "seconds": 106.4
+    },
+    "chartevents": {
+      "rows": 432997491,
+      "src_bytes": 3502392765,
+      "dst_bytes": 1640559916,
+      "seconds": 180.1
+    }
+  }
+}

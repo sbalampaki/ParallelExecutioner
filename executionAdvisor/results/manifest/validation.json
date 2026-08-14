@@ -1,0 +1,171 @@
+{
+  "written_utc": "2026-07-26T08:42:58+00:00",
+  "duckdb_version": "1.5.5",
+  "coverage_threshold_pct": 99.0,
+  "checks": [
+    {
+      "check": "icustays_count",
+      "value": 94458,
+      "expected": 94458,
+      "pass": true
+    },
+    {
+      "check": "heart_rate_coverage",
+      "itemids": [
+        220045
+      ],
+      "n_stays": 94458,
+      "n_with": 94437,
+      "pct": 99.9778,
+      "pass": true
+    },
+    {
+      "check": "diagnoses_coverage",
+      "n_hadm": 85242,
+      "n_with": 85218,
+      "pct": 99.9718,
+      "pass": true
+    }
+  ],
+  "diagnostics": {
+    "null_valuenum_by_param_type": {
+      "by_param_type": [
+        {
+          "param_type": "Text",
+          "n_records": 302725206,
+          "n_null": 263786244,
+          "pct_null_within": 87.14,
+          "pct_of_all_nulls": 100.0
+        },
+        {
+          "param_type": "Checkbox",
+          "n_records": 19537745,
+          "n_null": 1,
+          "pct_null_within": 0.0,
+          "pct_of_all_nulls": 0.0
+        },
+        {
+          "param_type": "Numeric",
+          "n_records": 107241051,
+          "n_null": 0,
+          "pct_null_within": 0.0,
+          "pct_of_all_nulls": 0.0
+        },
+        {
+          "param_type": "Numeric with tag",
+          "n_records": 3493489,
+          "n_null": 0,
+          "pct_null_within": 0.0,
+          "pct_of_all_nulls": 0.0
+        }
+      ],
+      "top_itemids": [
+        {
+          "itemid": 227969,
+          "label": "Safety Measures",
+          "param_type": "Text",
+          "n_null": 12869833
+        },
+        {
+          "itemid": 220048,
+          "label": "Heart Rhythm",
+          "param_type": "Text",
+          "n_null": 7947289
+        },
+        {
+          "itemid": 224650,
+          "label": "Ectopy Type 1",
+          "param_type": "Text",
+          "n_null": 7049295
+        },
+        {
+          "itemid": 227958,
+          "label": "Less Restrictive Measures",
+          "param_type": "Text",
+          "n_null": 5021996
+        },
+        {
+          "itemid": 224080,
+          "label": "Head of Bed",
+          "param_type": "Text",
+          "n_null": 3357599
+        },
+        {
+          "itemid": 224082,
+          "label": "Turn",
+          "param_type": "Text",
+          "n_null": 3341422
+        },
+        {
+          "itemid": 224086,
+          "label": "Activity Tolerance",
+          "param_type": "Text",
+          "n_null": 3194682
+        },
+        {
+          "itemid": 224093,
+          "label": "Position",
+          "param_type": "Text",
+          "n_null": 3157996
+        },
+        {
+          "itemid": 228905,
+          "label": "Altered Respiratory Status NCP - Interventions",
+          "param_type": "Text",
+          "n_null": 3059451
+        },
+        {
+          "itemid": 224642,
+          "label": "Temperature Site",
+          "param_type": "Text",
+          "n_null": 2500193
+        },
+        {
+          "itemid": 228868,
+          "label": "Assistance",
+          "param_type": "Text",
+          "n_null": 2398837
+        },
+        {
+          "itemid": 228928,
+          "label": "Impaired Tissue Perfusion NCP - Interventions",
+          "param_type": "Text",
+          "n_null": 2348854
+        },
+        {
+          "itemid": 223792,
+          "label": "Pain Management",
+          "param_type": "Text",
+          "n_null": 2337777
+        },
+        {
+          "itemid": 228988,
+          "label": "Safety Restraints NCP - Interventions",
+          "param_type": "Text",
+          "n_null": 2297608
+        },
+        {
+          "itemid": 224073,
+          "label": "Education Topic",
+          "param_type": "Text",
+          "n_null": 2109975
+        }
+      ]
+    },
+    "usable_projection": {
+      "chartevents": {
+        "total": 432997491,
+        "usable": 169211246
+      },
+      "labevents": {
+        "total": 158374764,
+        "usable": 77365985
+      },
+      "combined": {
+        "total": 591372255,
+        "usable": 246577231,
+        "gib_at_12B": 2.756
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "written_utc": "2026-07-26T08:10:20+00:00",
+  "tables": {
+    "labevents": {
+      "total": 158374764,
+      "null_hadm_id": 73768897,
+      "null_valuenum": 21490341,
+      "pct_null_hadm_id": 46.579,
+      "pct_null_valuenum": 13.569
+    },
+    "chartevents": {
+      "total": 432997491,
+      "null_stay_id": 0,
+      "null_valuenum": 263786245,
+      "pct_null_stay_id": 0.0,
+      "pct_null_valuenum": 60.921
+    }
+  }
+}
